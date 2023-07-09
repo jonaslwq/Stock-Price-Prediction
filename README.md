@@ -9,19 +9,20 @@ Created a target column that compares yesterday's closing price to today's closi
 Replaced zero values in the "Open" column with NaN values and filled the NaN values with the previous day's closing price.
 Additional features were created from the data:
 
-"Open Close Ratio": Ratio of closing price to opening price.
-"Close Open Ratio": Ratio of the previous day's closing price to the opening price.
-"Price Range": Difference between the high and low prices.
-"Price Change": Difference between the opening and closing prices.
-"Daily Returns": Percentage change in closing price.
-"Volume Change": Percentage change in volume.
-"Volume Weighted Average Price": Cumulative sum of (closing price * volume) divided by the cumulative sum of volume.
-Rolling averages and ratios were computed for different time horizons:
+#### "Open Close Ratio": Ratio of closing price to opening price.
+#### "Close Open Ratio": Ratio of the previous day's closing price to the opening price.
+#### "Price Range": Difference between the high and low prices.
+#### "Price Change": Difference between the opening and closing prices.
+#### "Daily Returns": Percentage change in closing price.
+#### "Volume Change": Percentage change in volume.
+#### "Volume Weighted Average Price": Cumulative sum of (closing price * volume) divided by the cumulative sum of volume.
 
-"Close_Ratio_{horizon}": Ratio of closing price to the rolling average of closing prices for the specified horizon.
-"Volume_Ratio_{horizon}": Ratio of volume to the rolling average of volume for the specified horizon.
-"Trend_{horizon}": Sum of the target column over a rolling window for the specified horizon.
-The dataset was cleaned, removing NaN and infinite values.
+### Rolling averages and ratios were computed for different time horizons:
+
+#### "Close_Ratio_{horizon}": Ratio of closing price to the rolling average of closing prices for the specified horizon.
+#### "Volume_Ratio_{horizon}": Ratio of volume to the rolling average of volume for the specified horizon.
+#### "Trend_{horizon}": Sum of the target column over a rolling window for the specified horizon.
+#### The dataset was cleaned, removing NaN and infinite values.
 
 ## Training the Models
 A rolling window approach was employed to train the models:
