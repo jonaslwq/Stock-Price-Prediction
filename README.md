@@ -29,11 +29,12 @@ A rolling window approach was employed to train the models:
 
 A rolling window of three years of data was used for training, followed by one year of testing.
 The model was trained and tested at regular intervals, with step size 250.
-Two functions were implemented:
 
-predict: This function trains the model on the training data and predicts the probabilities for the test data. The predicted probabilities are then thresholded at 0.6 to classify them as positives and at 0.4 to classify them as negatives. The function returns a DataFrame combining the actual and predicted values.
+### Two functions were implemented:
 
-backtest: This function implements the rolling window approach by iterating through the dataset and calling the predict function for each iteration. It concatenates all the predictions into a single DataFrame.
+#### predict: This function trains the model on the training data and predicts the probabilities for the test data. The predicted probabilities are then thresholded at 0.6 to classify them as positives and at 0.4 to classify them as negatives. The function returns a DataFrame combining the actual and predicted values.
+
+#### backtest: This function implements the rolling window approach by iterating through the dataset and calling the predict function for each iteration. It concatenates all the predictions into a single DataFrame.
 
 ## Models and Hyperparameters
 The following models were implemented with their respective hyperparameters:
